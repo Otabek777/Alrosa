@@ -840,26 +840,58 @@ ul, ol {
 }
 
 .licenses__left {
+  display: none;
   width: 620px;
+}
+
+.licenses__nav {
+  width: 620px;
+}
+.licenses__nav .item {
+  cursor: pointer;
+}
+.licenses__nav .item.slick-slide.slick-current.slick-active .title {
+  color: #D42424;
+}
+.licenses__nav .item.slick-slide.slick-current.slick-active .text {
+  color: #D42424;
+}
+.licenses__nav .item:hover .title {
+  color: #D42424;
+}
+.licenses__nav .item:hover .text {
+  color: #D42424;
 }
 
 .licenses__img {
   width: 484px;
   height: 360px;
 }
-.licenses__img img {
+.licenses__img .wrap {
   width: 100%;
+  height: 360px;
+  position: relative;
+  overflow: hidden;
+}
+.licenses__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: auto;
+  height: 100%;
 }
 
-.licenses__item {
+.licenses__item, .licenses__nav .item {
   display: block;
   padding: 24px 0 16px 0;
   border-bottom: 1px solid #D1D6DA;
 }
-.licenses__item .img {
+.licenses__item .img, .licenses__nav .item .img {
   display: none;
 }
-.licenses__item .title {
+.licenses__item .title, .licenses__nav .item .title {
   font-weight: 450;
   font-size: 22px;
   line-height: 24px;
@@ -868,7 +900,7 @@ ul, ol {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.licenses__item .text {
+.licenses__item .text, .licenses__nav .item .text {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
@@ -3006,6 +3038,14 @@ ul, ol {
 }
 
 @media screen and (max-width: 1200px) {
+  .licenses__left {
+    display: block;
+  }
+
+  .licenses__nav {
+    display: none;
+  }
+
   .btn_search.active .form .input {
     width: 276px;
   }
@@ -4086,7 +4126,7 @@ ul, ol {
     width: 150%;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .header_mobile__menu .ul {
     padding: 16px 20px 48px 20px;
   }
@@ -4297,6 +4337,7 @@ ul, ol {
     font-size: 24px;
     line-height: 32px;
     margin-bottom: 32px;
+    overflow: hidden;
   }
 
   .title_h2__box {
@@ -4407,8 +4448,8 @@ ul, ol {
     top: auto;
     position: absolute;
     bottom: 56px;
-    left: 20px;
-    right: 20px;
+    left: 0px;
+    right: 0px;
     z-index: 2;
   }
 
@@ -5170,5 +5211,15 @@ ul, ol {
   .presentations__content p {
     font-size: 15px;
     line-height: 20px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .contacts__left, .contacts__right, .footer__bottom .copy {
+    width: 100%;
+  }
+
+  .partners_page__tab .link {
+    margin-right: 22px;
+    font-size: 15px;
   }
 }

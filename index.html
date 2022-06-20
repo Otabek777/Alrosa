@@ -492,6 +492,20 @@
                     <a href="#" class="btn1">Все сертификаты</a>
                 </div>
                 <div class="licenses__box">
+                    <div class="licenses__nav">
+                        <div class="item">
+                            <h5 class="title">Диплом третьей степени</h5>
+                            <p class="text">Победителя IV всероссийского конкурса на лучшую проектную, изыскательскую организацию</p>
+                        </div>
+                        <div class="item">
+                            <h5 class="title">Диплом третьей степени</h5>
+                            <p class="text">Победителя IV всероссийского конкурса на лучшую проектную, изыскательскую организацию</p>
+                        </div>
+                        <div class="item">
+                            <h5 class="title">Диплом третьей степени</h5>
+                            <p class="text">Победителя IV всероссийского конкурса на лучшую проектную, изыскательскую организацию</p>
+                        </div>
+                    </div>
                     <div class="licenses__left">
                         <a href="#" class="licenses__item">
                             <div class="left">
@@ -522,7 +536,15 @@
                         </a>
                     </div>
                     <div class="licenses__img">
-                        <img src="img/doc.png" alt="">
+                        <div class="wrap">
+                            <img src="img/doc.png" alt="">
+                        </div>
+                        <div class="wrap">
+                            <img src="img/doc2.png" alt="">
+                        </div>
+                        <div class="wrap">
+                            <img src="img/doc.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -670,5 +692,24 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="slick-1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        $('.licenses__img').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            asNavFor: '.licenses__nav',
+            dots:false,
+            arrows:false
+        });
+        $('.licenses__nav').slick({
+            slidesToShow: 3,
+            asNavFor: '.licenses__img',
+            focusOnSelect: true,
+            vertical: true,
+            verticalSwiping: true,
+            dots:false,
+            arrows:false
+        });
+    </script>
 </body>
 </html>

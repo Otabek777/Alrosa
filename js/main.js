@@ -25,7 +25,7 @@ $(".header_mobile__menu ").click(function() {
     $(".header .btn_search").removeClass('active');
 });
 
-$(".header__navbar .ul_top .item").click(function() {
+$(".header__navbar .ul_top .item").hover(function() {
     $(".header_desctop__menu").addClass('active');
     $("body").addClass('hidden');
 });
