@@ -1520,6 +1520,16 @@ ul, ol {
 .services_post__slider .wrap {
   height: 480px;
   overflow: hidden;
+  position: relative;
+}
+.services_post__slider .wrap img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 126%;
+  height: auto;
 }
 .services_post__slider .slick-next {
   width: 24px;
@@ -4741,8 +4751,15 @@ ul, ol {
   }
 
   .crumbs {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    overflow-x: scroll;
+  }
+  .crumbs p, .crumbs a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    white-space: nowrap;
   }
 
   .services_post__slider .wrap {
