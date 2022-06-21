@@ -29,6 +29,12 @@ $(".header__navbar .ul_top .item").hover(function() {
     $(".header_desctop__menu").addClass('active');
     $("body").addClass('hidden');
 });
+$(".header_desctop__menu .wrap").hover(function() {
+    $(".header_desctop__menu .wrap").mouseleave(function() {
+        $(".header_desctop__menu").removeClass('active');
+        $("body").removeClass('hidden');
+    });
+});
 $(".header_desctop__menu .close").click(function() {
     $(".header_desctop__menu").removeClass('active');
     $("body").removeClass('hidden');
