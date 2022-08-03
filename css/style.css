@@ -1507,7 +1507,7 @@ ul, ol {
   margin-bottom: 64px;
 }
 .services_post__banner .wrap {
-  width: 1200px;
+  width: 1270px;
   height: 100%;
   position: absolute;
   top: 0;
@@ -2300,6 +2300,8 @@ ul, ol {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 120px;
 }
 
@@ -2310,6 +2312,7 @@ ul, ol {
   margin-right: 40px;
   overflow: hidden;
   position: relative;
+  margin-bottom: 40px;
 }
 .achievements__item .title {
   position: absolute;
